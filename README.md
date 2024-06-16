@@ -1,12 +1,17 @@
-# pygame_samples
+# pygame_samples spiral
 
- - demo_01.py: pygameの超簡単なデモ。
- - demo_02.py: 7セグのシミュレーション、各セグメントを2ブロックで構成。Seven_segクラス使用。
- - demo_LCD_font_01.py: 5x7のLCDフォント制作用。LCD_fontクラス使用。
- - demo_LCD_font.py: 5x7のLCDフォント、完成版。
+螺旋状にブロックを配置、移動するデモ。
 
- - demo_freetype.py: pygame.freetypeでテキスト表示。（新しい方式）
- - demo_freetype.py: pygame.fontでテキスト表示。（古い方式）
- - demo_openmoji.py: オープンソースの絵文字、openmojiのデモ。キー操作のデモ。
- - seven_seg_pg.py: Seven_segクラス
- - lcd_font_pg.py: LCD_fontクラス
+ - demo_train_01.py: pygameで円周上にブロックを角度指定で一つ置く。
+ - demo_train_02.py: pygameで円周上にブロックを開始角度、終了角度指定で連結して描く。
+ - demo_train_03.py: 開始角度を変化させて移動する。一旦、全部消してから描くバージョン。
+ - demo_train_04.py: 開始角度を変化させて移動する。頭を進めて描く、尻尾を進めた分消すバージョン。
+ - demo_train_05.py: キー操作でパラメータを変化させる。
+
+
+円周上にブロックをひとつ置く。ドットマトリクスの応用。
+開始角度を指定して置けるようにする。
+終了角度まで複数連結して描く。
+全部消す、開始角度を変化させて描く。で動かす。
+頭を進めて描く、尻尾を進めた分消す、で動かす。
+キー操作で各パラメータ（半径、色、中心、連結角度）を変化させる。
