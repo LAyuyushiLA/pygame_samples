@@ -6,9 +6,39 @@ pygame_samples演習の回答例
 
 - demo_01.py: ドットがマトリクスのすべてのスロットをスキャンするデモ。
 
+
+動画URLの前後に空行をいれると埋め込み表示ができる。
+
+https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415
+
+動画をテーブルに閉じ込めようとすると、単なる文字リンクになってしまう。
+
 |demo_01 movie|
 |--|
 |https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415|
+
+
+サムネイルとURLの文字リンクだと、こうなる。サムネイルをクリックして動画に飛べるとよいのだが、それは実現できない。
+
+<img src="https://github.com/user-attachments/assets/8eb0d84b-99ac-4d7c-bf25-cb206b63197c" width="200">
+</br>https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415
+
+
+
+
+<p></p>
+素材は、GitHub.comでREADME.mdを編集状態にして、ファイルをドラッグ＆ドロップするとアップロードされる。
+
+
+image
+https://github.com/user-attachments/assets/8eb0d84b-99ac-4d7c-bf25-cb206b63197c
+
+小さく表示
+<img src="https://github.com/user-attachments/assets/8eb0d84b-99ac-4d7c-bf25-cb206b63197c" width="160">
+
+
+video
+https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415
 
 
 ステップ4️
