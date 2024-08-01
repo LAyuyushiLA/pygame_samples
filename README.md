@@ -6,6 +6,8 @@ pygame_samples演習の回答例
 
 - demo_01.py: ドットがマトリクスのすべてのスロットをスキャンするデモ。
 
+https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415
+
 ステップ4️
 
 - demo_LCD_font.py: 0, 1, 2に加え、3-9を作って、さらに３桁表示に。
