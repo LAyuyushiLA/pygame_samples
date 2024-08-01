@@ -6,7 +6,10 @@ pygame_samples演習の回答例
 
 - demo_01.py: ドットがマトリクスのすべてのスロットをスキャンするデモ。
 
-https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415
+|demo_01 movie|
+|--|
+|https://github.com/user-attachments/assets/0694ea23-1bbe-4049-a8d8-a5d8405ab415|
+
 
 ステップ4️
 
