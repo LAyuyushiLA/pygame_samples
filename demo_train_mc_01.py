@@ -4,8 +4,17 @@ from pygame.locals import Rect
 from pygame.colordict import THECOLORS as pg_colors
 # see: https://www.pygame.org/docs/ref/color_list.html
 
+from mcje.minecraft import Minecraft
+import param_MCJE as param
 
 pygame.init()
+
+mc = Minecraft.create(port=param.PORT_MC)
+mc.postToChat('cube-train in the Minecraft')
+
+MC_X0, MC_Y0, MC_Z0 = 0, 70, 50
+color_on_mc = param.SEA_LANTERN_BLOCK
+color_off_mc = param.AIR
 
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode([640, 480])
@@ -19,20 +28,29 @@ dot_size = 24
 x0, y0 = 4, 4
 x1, y1 = 0, 0
 theta = 0
-length = 45
-r = 8
-speed = 3
-reso = 180 / math.pi * 0.6
-
+length = 360 * 3.2
+r = 6
+speed = 4
+reso = 180 / math.pi * 0.1
+dy = 6
 
 def draw_train(start=0, draw_length=0, color=color_on):
     th = start
-    while th > start - draw_length:
+    while th > (start - draw_length):
         x = x0 + int(math.cos(math.radians(th)) * r)
         y = y0 + int(math.sin(math.radians(th)) * r)
         pygame.draw.rect(screen, color, Rect((x0 + x) * dot_size, (y0 + y) * dot_size, dot_size, dot_size))
         th -= reso
 
+def draw_train_mc(start=0, draw_length=0, dy=0, color=color_on_mc):
+    global MC_Y0
+    th = start
+    while th > (start - draw_length):
+        x = MC_X0 + int(math.cos(math.radians(th)) * r)
+        z = MC_Z0 + int(math.sin(math.radians(th)) * r)
+        y = MC_Y0 + int(dy * (th / 360))
+        mc.setBlock(x, y, z, color)
+        th -= reso
 
 draw_train(start=theta, draw_length=length, color=color_on)
 running = True
@@ -44,10 +62,12 @@ while running:
             running = False
     # delete previous drawing
     draw_train(start=theta - length, draw_length=speed, color=color_bg)
+    draw_train_mc(start=theta - length, draw_length=speed, dy=dy, color=color_off_mc)
     # draw trail
     # draw_train(start=theta - length, draw_length=speed, color=color_off)
     # draw new train
     draw_train(start=theta, draw_length=speed, color=color_on)
+    draw_train_mc(start=theta, draw_length=speed, dy=dy, color=color_on_mc)
     theta += speed
 
     pygame.display.flip()  # update
